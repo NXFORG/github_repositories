@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { RepoContainer } from '../RepoContainer'
+import { RepoContainer } from '../RepoContainer';
 
 export const Form = () => {
     const [ username, setUsername ] = useState("");
@@ -7,14 +7,12 @@ export const Form = () => {
 
     const handleInput = (e) => {
         setUsername(e.target.value);
-        console.log(username);
+        setSubmit(false);
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setSubmit(true);
-        // setSubmit(false);
-        console.log(submit);
     }
 
     return (
@@ -24,7 +22,7 @@ export const Form = () => {
                 <input onChange={handleInput} value={username} type="text" name="username"/>
                 <input type="submit" value="Get repos" />
             </form>
-            {submit && <RepoContainer username={username}/>}
+            { submit && <RepoContainer username={username}/>}
         </>
     )
 }

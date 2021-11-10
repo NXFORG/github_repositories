@@ -4,7 +4,7 @@ import './style.css';
 export const Header = () => {
     return (
         <nav>
-            <h1>GitHub Repo Tracker</h1>
+            <h1 role="header">GitHub Repo Tracker</h1>
         </nav>
     )
 }

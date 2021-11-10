@@ -1,7 +1,10 @@
 import React from 'react';
+import './style.css';
 
 export const Header = () => {
     return (
-        <h1>GitHub Repo Tracker</h1>
+        <nav>
+            <h1>GitHub Repo Tracker</h1>
+        </nav>
     )
 }

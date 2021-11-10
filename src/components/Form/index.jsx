@@ -19,10 +19,10 @@ export const Form = () => {
     return (
         <div className="form">
             <h1>Welcome</h1>
-            <form onSubmit={handleSubmit}>
+            <form role="form" onSubmit={handleSubmit}>
                 <label htmlFor="username">Enter your GitHub username:</label>
                 <br />
-                <input onChange={handleInput} value={username} type="text" name="username"/>
+                <input role="textbox" onChange={handleInput} value={username} type="text" name="username"/>
                 <input type="submit" value="Get repos" />
             </form>
             { submit && <RepoContainer username={username}/>}

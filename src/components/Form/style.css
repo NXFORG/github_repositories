@@ -1,0 +1,28 @@
+.form {
+    text-align: center;
+}
+
+form {
+    font-size: 1.5rem;
+}
+
+.form input {
+    margin: 1rem 0.4rem;
+    padding: 0.4rem;
+}
+
+.form input[type="submit"] {
+    background: #2DA44E;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+}
+
+.form input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #216e39;
+}

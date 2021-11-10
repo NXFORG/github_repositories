@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { RepoBox } from '../RepoBox';
 import axios from 'axios';
+import './style.css';
 
 export const RepoContainer = ({username}) => {
     const [ repos, setRepos ] = useState([]);
@@ -17,10 +18,10 @@ export const RepoContainer = ({username}) => {
         fetchRepos();
     },[username])
 
-    const renderRepos = () => repos.map((r, i) => <RepoBox key={i} name={r.name} visibility={r.visibility} description={r.description} stars={r.stargazers_count} forks={r.forks} issues={r.open_issues} updated={r.updated_at}/>)
+    const renderRepos = () => repos.map((r, i) => <RepoBox key={i} link={r.html_url} name={r.name} visibility={r.visibility} description={r.description} stars={r.stargazers_count} forks={r.forks} issues={r.open_issues} updated={r.updated_at}/>)
 
     return (
-        <article>
+        <article className="repoContainer">
             {renderRepos()}
         </article>
     )

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import {StarIcon, RepoForkedIcon, IssueOpenedIcon} from '@primer/octicons-react';
+import { Updated } from '../Updated';
+import './style.css'
 
-export const RepoBox = ({name, visibility, description, stars, forks, issues, updated}) => {
+export const RepoBox = ({link, name, visibility, description, stars, forks, issues, updated}) => {
     const [ stats, setStats ] = useState(false);
 
     const showStats = () => setStats((state) => ! state);
@@ -14,11 +17,11 @@ export const RepoBox = ({name, visibility, description, stars, forks, issues, up
     }
 
     return (
-        <section>
-            <h2>{name}</h2><span>{visibility}</span>
+        <section className="repoItem">
+            <h2><a href={link}>{name}</a></h2><span className="visible">{visibility}</span>
             <p>{description}</p>
             <button onClick={showStats}>{changeButtonText()}</button>
-            { stats && <p>Stars: {stars} Forks: {forks} Issues: {issues} Updated: {updated}</p>}
+            { stats && <p><StarIcon /> {stars} <RepoForkedIcon className="icon" /> {forks} <IssueOpenedIcon className="icon" /> {issues} <Updated date={updated}/></p>}
         </section>
     )
 }

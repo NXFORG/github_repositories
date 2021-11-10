@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { RepoContainer } from '../RepoContainer'
 
 export const Form = () => {
     const [ username, setUsername ] = useState("");
@@ -20,11 +20,11 @@ export const Form = () => {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <label for="username">Enter your GitHub username:</label>
+                <label htmlFor="username">Enter your GitHub username:</label>
                 <input onChange={handleInput} value={username} type="text" name="username"/>
                 <input type="submit" value="Get repos" />
             </form>
+            {submit && <RepoContainer username={username}/>}
         </>
-        
     )
 }

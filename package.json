@@ -7,7 +7,7 @@
     "test": "jest --watch --verbose --setupFilesAfterEnv ./src/test/setupTests.js --env=jsdom",
     "coverage": "jest --setupFilesAfterEnv ./src/test/setupTests.js --coverage --silent --watchAll=false --env=jsdom",
     "dev": "webpack serve --mode development --config config/dev.webpack.config.js",
-    "build": "webpack --mode production"
+    "build": "webpack --config config/prod.webpack.config.js"
   },
   "jest": {
     "moduleNameMapper": {

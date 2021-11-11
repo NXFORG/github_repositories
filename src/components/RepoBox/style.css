@@ -1,0 +1,41 @@
+.repoItem {
+    border-bottom: 1px solid #30363d;
+    padding: 20px;
+}
+
+.repoItem h2 {
+    display: inline;
+    margin-right: 20px;
+    font-size: 1.2em;
+}
+
+.repoItem>h2>a {
+    color: #58a6ff;
+    text-decoration: underline;
+}
+
+.visible {
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.repoItem button {
+    background: #2DA44E;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+}
+
+.repoItem button:hover {
+    cursor: pointer;
+    background-color: #216e39;
+}
+
+.icon {
+    margin-left: 20px;
+}
